@@ -10,6 +10,13 @@ Files with a lot of lines and a lot of commits might be "technical debt hotspots
 Inspired by https://www.youtube.com/watch?v=SdUewLCHWvU (you should watch it!)
 
 
+## Installation
+
+You need node and either NPM or Yarn to run this. To install just run:
+```
+npm install // or yarn install
+```
+
 ## Usage
 
 May work on Windows (untested), best with Linux / Windows Linux Subsystem / GitBash. Just run:
