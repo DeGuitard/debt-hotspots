@@ -14,7 +14,9 @@ let ignoreList = ['.git', 'target', 'node_modules']
 let handleFile = (filepath) => {
     exec('wc -l < ' + filepath, function (error, lineCount) {
         git.log({file: filepath}, (err, log) => {
-            console.log(`${filepath};${log.all.length};${lineCount.trim()}`);
+            if (log.all.length > 0) {
+                console.log(`${filepath.replace(path, '')};${log.all.length};${lineCount.trim()}`);
+            }
         });
     });
 }
