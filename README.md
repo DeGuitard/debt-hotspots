@@ -25,9 +25,18 @@ May work on Windows (untested), best with Linux / Windows Linux Subsystem / GitB
 node index.js /path/to/git/repo > output.json
 ```
 
+## Interpretation
+
+The output of this program is simply an indicator, a first raw analysis. You should look at large white bubbles, and investigate why these files are showing up in the report. Maybe it's large because this is an exceptionally large file (like a binary), and it's ok, you really want that file on your repository. But maybe it's large because it has an unusual number of lines, and is very frequently edited. Then, maybe some refactoring should be done.
+
+Be careful not to simply associate "large bubble" with "bad". Just make sure the reasons this bubble is big are valid.
+
 # Visualization
 
 You can view the results with `view/index.html`. A demo json file is provided. To visualize your results, just update the `index.html` file to read your generated json output.
 ```
 d3.json("demo_graph.json", function(error, root) {
 ```
+
+# Demo
+![Demo](demo.gif)
